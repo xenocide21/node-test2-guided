@@ -1,21 +1,22 @@
 {
 	"private": true,
 	"scripts": {
-		"test": "jest",
-		"server": "nodemon index.js",
-		"start": "node index.js"
+		"test": "cross-env NODE_ENV=testing jest",
+		"server": "cross-env NODE_ENV=development nodemon index.js",
+		"start": "cross-env NODE_ENV= production node index.js"
 	},
 	"devDependencies": {
 		"cross-env": "^7.0.2",
-		"jest": "^26.0.1",
+		"jest": "^26.1.0",
 		"nodemon": "^2.0.4",
 		"supertest": "^4.0.2"
 	},
 	"dependencies": {
+		"colorette": "^1.2.1",
 		"cors": "^2.8.5",
 		"dotenv": "^8.2.0",
 		"express": "^4.17.1",
-		"knex": "^0.21.1",
+		"knex": "^0.21.2",
 		"sqlite3": "^4.2.0"
 	}
 }
